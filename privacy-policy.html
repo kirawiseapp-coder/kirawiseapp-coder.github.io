@@ -23,7 +23,10 @@
   footer { margin-top: 3rem; color: #64748B; font-size: .9rem; }
   @media (prefers-color-scheme: dark) {
     body { color: #E8EDF5; background: #0B1220; }
-    .lede { background: #16202E; border-color: #25344A; }
+    .lede {
+      background: #16202E; border-color: #25344A;
+      border-left-color: #2979FF;
+    }
     .date, footer { color: #94A3B8; }
   }
 </style>
@@ -31,49 +34,95 @@
 <body>
 
 <h1>KiraWise Privacy Policy</h1>
-<p class="date">Effective date: 21 August 2026</p>
+<p class="date">Effective date: 21 August 2026 &middot; Last updated: 18 October 2026</p>
 
 <div class="lede">
   <p><strong>KiraWise does not collect your data. Everything you enter stays on
-  your phone.</strong></p>
+  your phone unless you pass it on yourself.</strong></p>
   <p>This version of the app ships without the Android internet permission, so
-  it has no ability to send anything anywhere. Should a later version add an
-  optional account for backing up your data, this policy will be updated and
-  published before that version is released.</p>
+  it cannot connect to the internet. What you enter leaves the phone only when
+  you pass it on yourself: for example, a backup or spreadsheet you hand to
+  another app through Android&rsquo;s share sheet, or a bill split&rsquo;s summary you
+  copy and paste.
+  Should a later version add an optional account for backing up your data,
+  this policy will be updated and published before that version is
+  released.</p>
 </div>
 
 <h2>What KiraWise stores</h2>
-<p>Everything you type into KiraWise is written to a database file inside the
-app's own private storage on your device:</p>
+<p>Everything you type into KiraWise is kept inside the app&rsquo;s own private
+storage on your device, in a database file and, for pictures, image
+files:</p>
 <ul>
   <li>transactions, categories, and notes</li>
   <li>income sources and fixed monthly expenses</li>
+  <li>payslips you enter for a salary: gross pay, EPF, SOCSO, EIS and other
+  deductions, by month</li>
   <li>savings goals and progress</li>
+  <li>monthly spending limits for categories, money you plan to set aside
+  each month and what you actually moved, and your one-tap quick-spend
+  buttons</li>
   <li>accounts you create, including their names, colours and icons</li>
-  <li>bill splits and the items in them</li>
+  <li>bill splits: the items on the receipt, each person&rsquo;s name, how
+  much each of them owes, whether they have paid you back, and which of your
+  accounts the money went into; and the names of the people you last split a
+  bill with, kept to offer them for your next split</li>
+  <li>the ways you give friends to pay you back: a bank account number, a
+  DuitNow ID (which may be a phone number or an IC number), an e-wallet
+  number or a payment link, the name the account is under, and a picture of
+  a payment QR code</li>
   <li>your settings, such as theme and hourly rate</li>
 </ul>
 <p>Android keeps this storage private to the app. Other apps cannot read it.</p>
+<p>Copying a bill split&rsquo;s summary puts on the phone&rsquo;s clipboard a
+line for each person with their share, labelled with the items they had (or
+with their name, if they had none or the bill is split evenly), and the
+bill&rsquo;s total; and, if you saved a way of being paid back other than a
+QR code, that one (the only one, or the one you pick): its name and number
+and the name on the account, or the link. KiraWise sends it nowhere; the
+phone, or a keyboard app, may keep it in a clipboard history (and some phones
+sync it to your other devices).</p>
 
 <h2>Photos</h2>
-<p>If you choose a photo for an account, KiraWise opens the Android photo
+<p>If you choose a photo for an account, KiraWise opens the phone&rsquo;s own
 picker. You pick one image; the system hands only that image to the app.
 KiraWise never receives access to the rest of your photo library, which is why
 it does not ask for a photos permission.</p>
 <p>The image you pick is cropped, resized to 512&times;512 pixels, and saved
-inside the app's private storage. It is not uploaded anywhere.</p>
+inside the app&rsquo;s private storage. It is not uploaded anywhere.</p>
+<p>A payment QR code you add under <strong>Settings &rarr; Getting paid
+back</strong> comes through the same picker. It is cropped, resized to
+1024&times;1024 pixels so a friend&rsquo;s phone can still scan it off your
+screen, read on your phone to check that it holds a code, and saved inside
+the app&rsquo;s private storage. It is not uploaded anywhere either.</p>
+<p>To crop either one, the plugin KiraWise uses to open the picker copies the
+image you chose into the app&rsquo;s cache, and usually makes a smaller copy of
+that too. They are deleted when the crop screen closes, whether or not you
+keep the picture. If KiraWise is closed before then, they are deleted the
+next time you choose a picture or at a later start.</p>
 
 <h2>Backups you make yourself</h2>
-<p><strong>Settings &rarr; Backup &amp; restore</strong> writes a copy of your
-data to a file and hands it to Android's share sheet, where you choose what
-happens to it next.</p>
-<p>KiraWise does not send that file anywhere. It has no internet permission and
-no ability to. Once you pick an app in the share sheet, the file is in that
-app's hands and covered by that app's privacy policy, not this one &mdash; so if
+<p><strong>Settings &rarr; Backup &amp; restore</strong> makes two kinds of
+file, each only when you ask: a backup of all your data, and a spreadsheet of
+your transactions. Each is handed to Android&rsquo;s share sheet, where you choose
+what happens to it next.</p>
+<p>KiraWise does not send these files anywhere. It has no internet permission
+and no ability to. Once you pick an app in the share sheet, the file is in that
+app&rsquo;s hands and covered by that app&rsquo;s privacy policy, not this one &mdash; so if
 you send a backup to a cloud drive or a chat app, please treat it as you would
 any other document containing your finances.</p>
+<p>A file you export is a copy of your records as they were: deleting a record
+afterwards does not change it. KiraWise makes the file in its private cache
+and deletes it once the share sheet is done with it, or, if Android closes
+KiraWise first, the next time KiraWise starts. The share sheet is handed a
+copy of its own, which stays in the app&rsquo;s private cache until the next time
+you share a file from KiraWise, or until the cache is cleared: by Android, or
+by you under <strong>Settings &rarr; Apps &rarr; KiraWise &rarr; Storage
+&rarr; Clear cache</strong>, which leaves your data as it is.</p>
 <p>Restoring reads a file you pick and replaces what is currently in the app
-with its contents.</p>
+with its contents. To read it, the plugin KiraWise uses to open Android&rsquo;s
+file picker copies the file into the app&rsquo;s cache; KiraWise deletes that copy
+once it has read it, whether or not it could be restored.</p>
 
 <h2>What KiraWise does not do</h2>
 <ul>
@@ -88,34 +137,56 @@ with its contents.</p>
 <h2>Third-party components</h2>
 <p>KiraWise is built with open-source software libraries that run entirely on
 your device: a local database engine, a chart drawing library, date and number
-formatting, and the system photo picker. None of them contact a server and none
-of them collect information about you.</p>
+formatting, a QR code reader, the plugins that open the phone&rsquo;s own
+photo and file pickers and hand a file to Android&rsquo;s share sheet, and small
+plugins for the home-screen shortcuts, the app&rsquo;s version number and its own
+folders. None of them contact a server (without the internet permission,
+none of them could), and none of them collect information about you.</p>
 
 <h2>Children</h2>
 <p>KiraWise is a general-audience budgeting tool. It is not directed at children
 under 13, and it does not knowingly collect information from anyone.</p>
 
 <h2>Deleting your data</h2>
-<p>Because your data exists only on your device, you control it completely:</p>
+<p>Because KiraWise keeps your data only on your device, you control it
+completely:</p>
 <ul>
   <li><strong>Delete individual records</strong> inside the app at any time.</li>
   <li><strong>Delete everything</strong> by going to Android
   <strong>Settings &rarr; Apps &rarr; KiraWise &rarr; Storage &rarr; Clear
-  data</strong>, or simply by uninstalling KiraWise.</li>
+  data</strong> (Clear storage on some phones), or simply by uninstalling
+  KiraWise.</li>
 </ul>
-<p>Uninstalling removes the database and any account photos with it. There is no
-server-side copy for us to delete, because there is no server.</p>
+<p>When you delete a record, KiraWise deletes it from its database. Some of
+what it said can still be elsewhere: in any backup or spreadsheet you
+exported before, and the share sheet&rsquo;s copy of the last file shared
+(see Backups you make yourself); in a bill split&rsquo;s summary you copied,
+on the clipboard, in a clipboard history the phone or a keyboard app keeps
+(or on another device it synced to), or wherever you pasted it; and, for a
+bill split you delete, its people&rsquo;s names, if they are among the names
+kept for your next split.</p>
+<p>Test builds before version 1.0.0 (47) did not delete these cache copies:
+the picker&rsquo;s copies of a chosen picture, the file made for the share
+sheet, and the copy of a file picked to restore. 1.0.0 (47) deletes the
+picker&rsquo;s copies and the files made for the share sheet the first time
+it starts. The copy of a file picked to restore stays in the app&rsquo;s private
+cache until Android clears it, or until you clear it yourself under
+<strong>Settings &rarr; Apps &rarr; KiraWise &rarr; Storage &rarr; Clear
+cache</strong>, which leaves your data as it is.</p>
+<p>Uninstalling removes the database, any account photos and any QR code
+pictures with it, and the app&rsquo;s cache with whatever copy is left there. There
+is no server-side copy for us to delete, because there is no server.</p>
 
 <h2>Changes to this policy</h2>
 <p>If a future version of KiraWise adds a feature that sends data off your
-device — for example optional cloud backup — this policy will be updated before
+device &mdash; for example optional cloud backup &mdash; this policy will be updated before
 that version is released, and the app will ask for your consent before any data
 leaves your phone.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: kirawise.app@gmail.com</p>
 
-<footer>KiraWise &middot; Last updated 21 August 2026</footer>
+<footer>KiraWise &middot; Last updated 18 October 2026</footer>
 
 </body>
 </html>
