@@ -34,54 +34,133 @@
 <body>
 
 <h1>KiraWise Privacy Policy</h1>
-<p class="date">Effective date: 21 August 2026 &middot; Last updated: 1 November 2026</p>
+<p class="date">Effective date: 25 November 2026</p>
+<p>This policy covers every version of KiraWise, test builds on Google Play
+included. Version 1 has no internet permission and sends nothing; version
+2.0 and later go online only for what this policy describes.</p>
 
 <div class="lede">
-  <p><strong>KiraWise does not collect your data. Everything you enter stays on
-  your phone unless you pass it on yourself.</strong></p>
-  <p>This version of the app ships without the Android internet permission, so
-  it cannot connect to the internet. What you enter leaves the phone only when
-  you pass it on yourself: for example, a backup you hand to another app
-  through Android&rsquo;s share sheet, or a bill split&rsquo;s summary you copy and
-  paste.
-  Should a later version add an optional account for backing up your data,
+  <p><strong>KiraWise does not collect what you enter. Your records, budgets,
+  goals, bill splits, receipt photos, the transfer screenshots you import, the
+  payment notifications you choose to have read and the reminders you set stay
+  on your phone and are not sent anywhere; the one exception, off unless you turn it on, is a
+  receipt's currency and date in a request for an exchange rate.</strong></p>
+  <p>From version 2.0 the app has the Android internet permission, and uses it
+  for three things only, each described below: finding out whether this phone
+  has KiraWise Plus, and buying it, through Google Play and a service called
+  RevenueCat, whose library also sends diagnostics of its own; and the
+  diagnostic information that Google's ML Kit, the part that reads receipts
+  and screenshots,
+  and Google Play's billing library may send to Google; and, only if you turn
+  it on, asking Bank Negara Malaysia for an exchange rate. None of it carries
+  anything you entered, apart from that exchange-rate request: the currency
+  and date of the receipt it is for.</p>
+  <p>Should a later version add an optional account for backing up your data,
   this policy will be updated and published before that version is
   released.</p>
 </div>
 
 <h2>What KiraWise stores</h2>
-<p>Everything you type into KiraWise is kept inside the app&rsquo;s own private
-storage on your device, in a database file and, for pictures, image
-files:</p>
+<p>Everything you enter into KiraWise is kept in the app's own private
+storage on your device, most of it in one database file:</p>
 <ul>
   <li>transactions, categories, and notes</li>
+  <li>a label on an expense, if you choose to put one on it: Yay!, Happy,
+  Neutral, Regret or Sad</li>
   <li>income sources and fixed monthly expenses</li>
-  <li>payslips you enter for a salary: gross pay, EPF, SOCSO, EIS and other
-  deductions, by month</li>
+  <li>if you enter one, a payslip breakdown of your salary: the gross pay and
+  what came off it</li>
+  <li>budgets: spending limits you set for categories, what you plan to put
+  aside each month and what went there, and your quick-spend buttons on
+  Home (a name, an amount, a category and an account)</li>
   <li>savings goals and progress</li>
-  <li>monthly spending limits for categories, money you plan to set aside
-  each month and what you actually moved, and your one-tap quick-spend
-  buttons</li>
   <li>accounts you create, including their names, colours and icons</li>
-  <li>bill splits: the items on the receipt, each person&rsquo;s name, how
-  much each of them owes, whether they have paid you back, and which of your
-  accounts the money went into; and the names of the people you last split a
-  bill with, kept to offer them for your next split</li>
+  <li>bill splits: the items on the receipt, each person&rsquo;s name, who
+  paid the bill (you or one of them), how much each of the others owes,
+  whether they have paid it back, and which of your accounts the money went
+  into; and the names you used last, ready for the next split</li>
+  <li>for a bill split in another currency: the currency, its amounts in that
+  currency, the exchange rate it was converted at and where that rate came
+  from (the app's approximate rate, one you typed, or Bank Negara Malaysia's,
+  with the day it was published for)</li>
+  <li>trips: each trip's name, its dates and its currency, the friends on it,
+  and which bill splits are part of it</li>
+  <li>the receipt photo a split was scanned from: a smaller copy, kept with
+  the split until you delete it or the period you chose for it ends (see
+  Receipt photos)</li>
+  <li>for each transfer or payment screenshot you import: a fingerprint of
+  its transaction reference, so that the same screenshot is not imported
+  twice. It is a SHA-256 hash, kept in the reference's place and used only
+  to know the same screenshot again; the reference itself is not kept. It
+  goes when the record
+  the screenshot became is deleted, or when the friend it marked as paid is
+  marked unpaid again or their split is deleted</li>
   <li>the ways you give friends to pay you back: a bank account number, a
   DuitNow ID (which may be a phone number or an IC number), an e-wallet
   number or a payment link, the name the account is under, and a picture of
   a payment QR code</li>
-  <li>your settings, such as theme and hourly rate</li>
+  <li>if you turn on the optional payment notifications below: the title and
+  text of a payment notification from an app you chose, word for word
+  (usually the amount, who it was with and the time, sometimes a balance, a
+  reference number or a card's last digits), with which app sent it and
+  when, kept in a private file until you have dealt with it; the list of
+  apps you chose; and, for each of those apps, a count of how many
+  notifications were read, kept and left out (numbers only), and the account
+  you last added one of its payments to, to suggest it next time</li>
+  <li>if you file a payment from a notification into a Put away destination:
+  which destination, the amount, the month and the payee's name; and, for each
+  payee name, where you filed the last payment (a destination or a category)
+  and any note you wrote for it, to suggest them next time; all on your phone</li>
+  <li>if you use the slack-off timer, each run: when it started and ended,
+  and what it came to at your hourly rate</li>
+  <li>if you set reminders: for a fixed bill, how many days before its due day
+  it is reminded of and at what time; for a reminder that is not a bill, its
+  name, icon, day of the month, amount if you gave one, when it is reminded of
+  and the due date you marked as paid; and the list of reminders worked out
+  for the months ahead, what each will say and when, kept for Android to show
+  them (see Reminders)</li>
+  <li>after you have done a change list written by an AI (Settings &rarr; Backup &amp;
+  export), a copy of every record it touched, as it was before and after,
+  the records it deleted included, with what was linked to them, so that the
+  list can be undone. Only the latest list's copy is kept. It goes when that
+  list is undone; as soon as KiraWise sees that something done since would
+  stop the undo, such as changing or deleting one of those records yourself,
+  or deleting an account they were in; when another list is done; or when
+  you restore a backup. It is never put in a backup or any export.</li>
+  <li>what you have entered in a transaction, in quick add or in Add Item and
+  not yet saved, so that it is still there if the app is closed before you
+  save: the same kinds of details as above, and for Add Item the kept copy
+  of the receipt photo it was scanned from (see Receipt photos). The latest
+  one is
+  kept for each of a new transaction, changes to a saved one, quick add and
+  Add Item. It goes when you save it or discard it; Add Item's, and changes to
+  a saved transaction, also when you leave that page; and changes to a
+  transaction also when it is deleted, or when the editor finds it was changed
+  elsewhere since. It goes when you restore a backup, and is never put in a
+  backup or any export.</li>
+  <li>RevenueCat's library's own copy of the random identifier and of
+  RevenueCat's last answer about Plus (see KiraWise Plus)</li>
+  <li>your settings, such as theme, hourly rate and whether online exchange
+  rates are on; and, for each currency you have typed a rate for, the last one
+  you typed, offered again on your next receipt in it</li>
 </ul>
 <p>Android keeps this storage private to the app. Other apps cannot read it.</p>
-<p>Copying a bill split&rsquo;s summary puts on the phone&rsquo;s clipboard a
-line for each person with their share, labelled with the items they had (or
-with their name, if they had none or the bill is split evenly), and the
-bill&rsquo;s total; and, if you saved a way of being paid back other than a
-QR code, that one (the only one, or the one you pick): its name and number
-and the name on the account, or the link. KiraWise sends it nowhere; the
-phone, or a keyboard app, may keep it in a clipboard history (and some phones
-sync it to your other devices).</p>
+<p>If you add a KiraWise widget to your home screen, it shows its figure there
+(how much this month has left, or the timer and when it started), where anyone
+who can see your home screen can read it; remove the widget to stop that.
+Copying a bill split's summary puts on the phone's clipboard a line for each
+person with their share, labelled with the items they had (or with their name,
+if they had none or the bill is split evenly), and the bill's total; and, if
+you paid the bill and saved a way of being paid back other than a QR code,
+that one (the only
+one, or the one you pick): its name and number and the name on the account,
+or the link. KiraWise sends it nowhere; the phone, or a keyboard app, may keep
+it in a clipboard history (and some phones sync it to your other
+devices). Sharing a trip's summary hands Android's share sheet a text with the
+trip's name and dates, what each person on it spent, each friend who owed you
+and what they still owe (or that they have paid), what the trip came to, and,
+when someone owes you, a way of being paid back as above; it goes wherever
+you send it, and KiraWise sends it nowhere else.</p>
 
 <h2>Photos</h2>
 <p>If you choose a photo for an account, KiraWise opens the phone&rsquo;s own
@@ -101,50 +180,381 @@ that too. They are deleted when the crop screen closes, whether or not you
 keep the picture. If KiraWise is closed before then, they are deleted the
 next time you choose a picture or at a later start.</p>
 
-<h2>Backups you make yourself</h2>
-<p><strong>Settings &rarr; Backup &amp; restore</strong> makes one kind of
-file, only when you ask: a backup of all your data. It is handed to
-Android&rsquo;s share sheet, where you choose what happens to it next.</p>
-<p>KiraWise does not send this file anywhere. It has no internet permission
-and no ability to. Once you pick an app in the share sheet, the file is in that
-app&rsquo;s hands and covered by that app&rsquo;s privacy policy, not this one &mdash; so if
-you send a backup to a cloud drive or a chat app, please treat it as you would
-any other document containing your finances.</p>
+<h2>Receipt photos</h2>
+<p>To split a bill you can photograph the receipt, or pick a photo of it you
+already have. KiraWise does not use the camera itself and has no camera
+permission: it asks Android's own camera app to take the picture, or opens the
+Android photo picker, and is handed that one image.</p>
+<p>The photo is read on your phone, to find the items and their prices. It is
+never uploaded. The image the camera or the picker handed over, and the copy
+made to read it, are deleted from the app's storage as soon as it has been
+read. If KiraWise is closed before then (Android may stop it while the camera
+or the picker is open, on a phone short of memory), what was left of them is
+deleted the next time KiraWise starts, or the next time you choose a picture
+or scan a receipt.</p>
+<p>KiraWise keeps a smaller copy of the photo, at most 1600 pixels on its
+longer side, made afresh from the picture so that it carries none of the
+details a camera may write into a photo, such as where it was taken. It is
+kept in the app's private storage with the split, so that you can look at the
+receipt again on the split's page. Until the split is saved it is kept with
+the unsaved draft, and deleted if you discard the draft or scan another
+receipt in its place. It is deleted when you delete the split; when you delete
+your receipt photos in <strong>Settings &rarr; Receipt photos</strong>; or, if
+you choose a period there (30 days, 90 days, 180 days or a year), the first
+time KiraWise starts after it has been kept that long, or at once if it already
+has when you choose. By default there is no period. The split, its items and
+its amounts stay when the photo goes. A backup you make includes these copies
+(see Backups and exports you make yourself).</p>
+
+<h2>Transfer and payment screenshots</h2>
+<p>To record a transfer or a payment you made, or to mark that a friend has
+paid you back their share of a bill, you can pick a screenshot of it from an
+e-wallet app: its transaction details, or the page a transfer ends on.
+KiraWise opens the Android photo picker and is handed that one image; it has
+no photos permission.</p>
+<p>The screenshot is read on your phone and never uploaded. What was read is
+put on the page for you to check, and like anything typed there it is kept
+as an unsaved draft until you save or discard it (see What KiraWise stores).
+Saved as a record, it
+keeps the amount, the date and the other party's name (the merchant, the
+person you paid, or the person who paid you), and for a card payment in
+another currency that amount too, in the record's note. Used to mark a friend
+as paid, it keeps nothing of the screenshot. Either way the fingerprint above
+is kept. Account numbers, card digits, balances and the transaction reference
+shown on it are not kept.</p>
+<p>The copy the picker made of the screenshot in the app's storage is deleted
+as soon as it has been read, with the copy made to read it; the screenshot in
+your gallery is not touched. If KiraWise is closed before then, what was left
+of it is deleted the next time KiraWise starts, or the next time you choose a
+picture or scan.</p>
+
+<h2>Payment notifications (optional, off by default)</h2>
+<p>KiraWise can offer to log a payment you have made or received, from a
+notification shown by an app on your phone <strong>that you choose</strong>. It
+is off until you turn it on in Settings and pick at least one app; until then
+nothing is read. Android makes you grant the access yourself, in its own
+settings.</p>
+<p>What that means, plainly: Android gives an app with this access
+<strong>every</strong> notification on the phone, not just one app's.
+KiraWise looks at which app a notification came from before it reads
+anything. A notification from an app you did not choose is dropped on the
+spot: not read, not stored, not logged. From the apps you did choose, KiraWise
+keeps a notification only if it has both an amount in ringgit and a sign of
+which way the money went: a word such as paid or received, or &quot;to&quot;
+or &quot;from&quot; followed by a name. A notification with no such sign is
+not kept, with one exception: a card payment made by tapping the phone, which
+the phone's own wallet app announces as nothing but the card, the shop and the
+amount. That one is kept, from that wallet app only and only if you chose it,
+and is offered to you as a payment you made. One that mentions money going both
+ways is kept, and you choose which it was before it is recorded.</p>
+<p><strong>One-time codes.</strong> A notification that says it is a one-time
+code is not saved: one that uses wording such as OTP, TAC, verification code,
+PIN or password (in Chinese, &#39564;&#35777;&#30721;, &#23494;&#30721; or &#21475;&#20196;). A
+notification that carries a number which looks like a code is not saved
+either. Offers, top-ups, payments that did not go through and every other
+notification that is not a payment are left out the same way. This check goes
+by wording, so it cannot be perfect: a code sent in an unusual format, with
+none of that wording, that also has an amount and a sign of which way the money went may
+be kept as if it were a payment.</p>
+<p>What KiraWise keeps is the notification's title and text, word for word:
+usually the amount, who it was with and the time, and sometimes a balance, a
+reference number or a card's last digits the app mentions. With them it keeps
+which app sent it, when it arrived and the identifier Android gives it. It
+stays in a private file on your phone, is shown only to you, to confirm, and
+is not sent anywhere. Nothing is added to your records until you say so.</p>
+<p>When you file a payment into a Put away destination, KiraWise keeps which
+destination, the amount, the month and the payee's name, and it remembers, per
+payee name, where you filed the last payment (that destination, or the category
+you added it under) and any note you wrote for it, to suggest them next time.
+For each app it also remembers the account you last added one of its payments
+to, and suggests that account for its next one. All of it stays on your
+phone.</p>
+<p>That text is kept only until you have dealt with the notification. When you
+add it to your records, file it into a Put away destination, mark it as already
+counted, skip it or take it off the list, its text is removed from the file. What stays is a note that it was
+dealt with: an identifier (made from the phone's user profile, which app it
+came from and the number Android knows that app by, and that app's own number
+and any tag for it), when it arrived, when you dealt with it and which of
+those you chose, and nothing of what the notification said. The note is
+removed the first time KiraWise is opened after ninety days. While KiraWise is
+running it also holds in memory, for up to a day, a scrambled fingerprint of a
+kept notification's app and words, only to recognise the same payment posted
+again; it is never written down. A notification you have not dealt with is
+removed once sixty days have passed since it arrived: the first time KiraWise
+is opened after that, or sooner if another payment notification is kept; and
+one that KiraWise finds it cannot use after all is removed the next time the
+app looks.</p>
+<p>When a payment notification is kept while KiraWise is not on your screen,
+KiraWise shows a notification of its own so that you know to go in and
+confirm it. It says only that a payment was noticed and how many are
+waiting: no amount, no name, nothing else of what the original notification
+said. It is on unless you switch it off on the page where you choose the
+apps, and it goes when you open KiraWise or when nothing is waiting.</p>
+<p>For each app you choose, KiraWise also counts how many of its notifications
+it read, how many it kept, and how many it left out for each of the reasons
+above, and shows you those numbers beside the app. It records the numbers
+only, never what a notification said. They stay on your phone and are cleared
+when you untick the app.</p>
+<p>To let you choose, KiraWise reads which apps on your phone have an icon on
+the home screen. That list is used only to show you the chooser: it is not
+saved and not sent anywhere. KiraWise keeps only the apps you tick (their
+package names), and a change takes effect straight away: an app you tick is
+read from that moment, and that includes any notification of its that is still
+showing on the phone.</p>
+<p>You can switch it off at any time in KiraWise's Settings, which takes you
+to the Android screen where the access is withdrawn.</p>
+
+<h2>Exchange rates (optional, off by default)</h2>
+<p>A bill split can be in another currency, for a trip abroad. KiraWise works
+it out in that currency, converts it to ringgit at an exchange rate it saves
+with the split, and shows both. With nothing turned on, the rate is the last
+one you typed for that currency, or an approximate rate built into the app,
+and you can type the receipt's own rate instead; nothing is sent
+anywhere.</p>
+<p>If you turn on online exchange rates in Settings, KiraWise asks Bank Negara
+Malaysia, Malaysia's central bank, for the rate it published, whenever a split
+you are entering in Add Item is in a currency the bank publishes: when the
+currency is set, by you or from the split's trip, and when the split's date
+changes. The request goes over HTTPS to Bank Negara Malaysia's open data
+service at api.bnm.gov.my and names only the currency's code and the date;
+when the bank has no rate for that day, such as a weekend or a holiday,
+KiraWise asks again for each day before it, up to seven. Like any request, it
+comes from your phone's internet address, and it carries a header naming the
+software that made it (Dart, and its version). It carries nothing else: no
+amounts, names or items, and no identifier for you or the phone. A rate
+fetched is held in memory until the app is closed, so the same question is not
+asked twice; apart from the rate saved with a split, or with the unsaved draft
+of one, it is not written down.</p>
+<p>How Bank Negara Malaysia treats the requests it receives is for its own
+terms and policies (https://www.bnm.gov.my). The rates are Bank Negara
+Malaysia's: wherever KiraWise shows one it says so, and links to the bank's
+terms of use for its data (https://www.bnm.gov.my/terms-of-use-bnm-datasets).
+KiraWise is not affiliated with or endorsed by Bank Negara Malaysia.</p>
+<p>You can turn it off at any time in Settings. The rates already saved with
+your splits stay as they are.</p>
+
+<h2>Reminders (optional, off until you set one)</h2>
+<p>You can ask KiraWise to remind you before a fixed bill falls due, and add
+reminders that are not bills, such as a credit card's or an instalment plan's
+due date: a name, the day of the month and, if you like, an amount. Reminders
+that are not bills are not counted in your budget.</p>
+<p>KiraWise works out on your phone when each reminder comes and what it says,
+for the months ahead, and hands that list to Android, which shows each one as
+a notification at its time. The list is kept in KiraWise's private storage on
+your phone with the rest of its data, is not backed up by Android, and is not
+sent anywhere. A reminder shows the name, the due date and, if you gave one,
+the amount, so like any notification it can be read by anyone who can see
+your phone's screen. A bill is not reminded of in a month whose payment you
+have already recorded, and a reminder you mark as paid is not shown for that
+due date.</p>
+<p>For this KiraWise has two Android permissions. The first is also what lets
+it show the alert about a noticed payment (see Payment notifications); they
+are used for nothing else:</p>
+<ul>
+  <li>Notifications: from Android 13, the phone asks you before an app may show
+  any. KiraWise asks only when you turn a reminder on, or when you choose an
+  app whose payment notifications it should read or switch the alert about
+  them on, never at launch. If you say no, KiraWise says so beside the
+  switch, and nothing else changes.</li>
+  <li>Run at startup: the alarm set for the next reminder does not survive a
+  restart, so after one Android briefly wakes KiraWise to set it again from
+  the list. The same happens after the app is updated and when the phone's
+  clock or time zone is changed. It reads nothing else and sends nothing.</li>
+</ul>
+<p>KiraWise does not use the permission for exact alarms, so a reminder may
+come a few minutes after the time you chose, and up to about an hour later if
+the phone has been left untouched.</p>
+<p>You can turn each reminder off on its own, or all of them in Settings &rarr;
+Due-date reminders, and remove the ones that are not bills. Either way Android
+is handed the shorter list straight away. Clearing KiraWise's data or
+uninstalling it removes the list and cancels the reminders.</p>
+
+<h2>Backups and exports you make yourself</h2>
+<p><strong>Settings &rarr; Backup &amp; export</strong> makes three kinds of
+file, each only when you ask: a backup of all your data; with Plus, a
+spreadsheet of your transactions; and a text of your records for an AI chat app, which you
+can also copy instead of sharing. Each is handed to Android's share sheet,
+where you choose what happens to it next, or, for the text you copy, put on
+the phone's clipboard. The backup is a zip file holding your data and the kept
+receipt photos, so with many photos it can run to tens of megabytes; the
+spreadsheet and the text carry no photos.</p>
+<p>KiraWise does not send any of them anywhere: nothing in the app sends a
+backup, a spreadsheet or that text, or anything in them, over the network.
+Once you pick an app in the share sheet, or paste the text into an AI chat,
+it is in that app's or service's hands and covered by its privacy policy, not
+this one &mdash; so please treat it as you would any other document
+containing your finances. Text you copy is on the clipboard; the phone, or a
+keyboard app, may keep it in a clipboard history (and some phones sync it to
+your other devices).</p>
 <p>A file you export is a copy of your records as they were: deleting a record
 afterwards does not change it. KiraWise makes the file in its private cache
 and deletes it once the share sheet is done with it, or, if Android closes
 KiraWise first, the next time KiraWise starts. The share sheet is handed a
-copy of its own, which stays in the app&rsquo;s private cache until the next time
+copy of its own, which stays in the app's private cache until the next time
 you share a file from KiraWise, or until the cache is cleared: by Android, or
 by you under <strong>Settings &rarr; Apps &rarr; KiraWise &rarr; Storage
 &rarr; Clear cache</strong>, which leaves your data as it is.</p>
 <p>Restoring reads a file you pick and replaces what is currently in the app
-with its contents. To read it, the plugin KiraWise uses to open Android&rsquo;s
-file picker copies the file into the app&rsquo;s cache; KiraWise deletes that copy
-once it has read it, whether or not it could be restored.</p>
+with its contents. To read it, Android's file picker hands KiraWise a copy of
+the file, which KiraWise deletes once it has read it, whether or not it could
+be restored.</p>
+<p>You can also paste an AI's reply back, in the same place: KiraWise reads
+the clipboard only when you tap Paste, shows every change, and makes none
+until you confirm. If the reply has mistakes, KiraWise can copy a list of
+them for you to give back to the AI.</p>
+
+<h2>KiraWise Plus (optional purchase)</h2>
+<p>KiraWise Plus is an optional upgrade, bought through Google Play. It is
+sold as a one-time purchase: you pay once and keep it, and nothing renews. It
+may also be offered as a subscription, monthly or yearly, which renews by
+itself until you cancel it in Google Play; where one is on offer, the Plus
+page's Manage subscription opens it there.
+Without it the app is free to use: budgets, goals, splitting a bill, typing
+a receipt in by hand, making and restoring a backup, and bringing changes
+back from an AI chat are never limited, and scans each day (receipts and
+transfer screenshots together),
+payments recorded from notifications each day, and texts for an AI chat app
+each day (shared or copied) are free up to a set number, shown on the Plus
+page. Plus removes those limits, and adds the spreadsheet of your
+transactions.
+Google Play takes the payment: KiraWise never
+sees your card, your Google account or your payment details.</p>
+<p>To know whether this phone has Plus, KiraWise uses RevenueCat, a
+purchase service that works on our behalf, through RevenueCat's own
+library in the app. The library contacts RevenueCat when the app starts, when
+it comes back to the screen after being in the background, when you open the
+Plus page, when you press Check again in Settings, and when you buy or
+restore Plus, and it also fetches its own settings from RevenueCat. These
+requests carry:</p>
+<ul>
+  <li>a random identifier the library makes up the first time it asks. It is
+  not your name, email, Google account or the phone's advertising ID;</li>
+  <li>for a phone whose Google account has bought Plus, Google Play's record
+  of that purchase: which plan, its price and currency, when it was bought,
+  when it ends or renews, if it does, the purchase token Google Play issues for it, and
+  which of the app's price lists it was bought from. The library sends this
+  by itself when the app starts or comes back to the screen on such a
+  phone, after a reinstall or on a new phone as well, under the new random
+  identifier, without Restore being pressed;</li>
+  <li>the technical details the library sends with every request: the
+  phone's make and model; the app's name and version; the phone's and the
+  library's software versions; every language set on the phone, in order; the
+  store country; whether the app is a test or debug build and whether it was
+  in the background; and the IP address the request comes from.</li>
+</ul>
+<p>When you buy Plus, the library also gives Google Play a scrambled form of
+the random identifier (its SHA-256 hash), which Google Play keeps with the
+purchase.</p>
+<p><strong>Plus given to you.</strong> We may give Plus to someone free of
+charge, for a set time, in RevenueCat's pages. For that we need the random
+identifier above: Settings shows it under Member ID, and tapping it copies it.
+If you want Plus given to you, you send that identifier to us yourself, in any
+way you choose; the app never sends it to us: it goes to RevenueCat, with the
+requests described above; for a phone that has had Plus the library also keeps
+it in Google's Block Store (see After a reinstall), and when you buy Plus
+Google Play is given a scrambled form of it. We use it only to give Plus to
+that identifier, or to end the gift early. A gift is tied to the identifier:
+after a reinstall or on a new phone, where the app has a new one, it may not
+carry over.</p>
+<p><strong>After a reinstall.</strong> Reinstalling KiraWise or clearing its
+data removes the random identifier with everything else, and the library
+makes up a new one. For a phone that has had Plus (bought, restored or given),
+the library also saves the identifier in Google's Block Store, a store kept by
+Google Play services, and asks for it to be backed up. When you later restore
+Plus, or buy it, the library reads the old identifier back from Block Store,
+if Google still has it, and has RevenueCat link the old identifier and the new
+one. A Google Play purchase is also found again by Google Play's record
+of the purchase, which the library sends when the app starts or comes back
+to the screen (above), and again on a restore.</p>
+<p>By <a href="https://developer.android.com/identity/block-store">Google's description of
+Block Store</a>, what is saved there stays after the app is uninstalled and
+installed again if Google's Backup is on for the phone (Settings &rarr; Google
+&rarr; Backup); it is backed up to the cloud from time to time, end-to-end
+encrypted when possible (Google names Android 9 or later and a screen lock),
+and it can be brought to a new phone set up from that backup. Google does not
+say how long it keeps it, nor what clearing the app's data does to it.
+KiraWise itself never deletes that copy.</p>
+<p><strong>RevenueCat's own diagnostics.</strong> The library can also send
+RevenueCat information about how the library itself is working, such as its
+requests, their timings and errors. KiraWise asks for this to be off, but the
+library follows RevenueCat's servers over the app's request when the servers
+set it, so RevenueCat can turn it on, and the app cannot prevent that.</p>
+<p>We have RevenueCat handle all of this only so that the app can tell whether
+Plus is active; we use it for nothing else and do not sell it. How RevenueCat
+itself treats data is set out in its own privacy policy, at
+<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.
+Nothing you entered in KiraWise is sent to RevenueCat: no records, amounts,
+notes, photos or notification text. The app gives it no name, email or other
+detail about you, and has the collection of the phone's identifiers that
+RevenueCat offers turned off.</p>
 
 <h2>What KiraWise does not do</h2>
 <ul>
   <li>No account, no sign-up, no login</li>
-  <li>No analytics, crash reporting, or usage tracking</li>
+  <li>No analytics, crash reporting or usage tracking of our own (Google's ML
+  Kit, Google Play's billing library and RevenueCat's library send diagnostics
+  of their own: see Third-party components and KiraWise Plus)</li>
   <li>No advertising and no advertising identifiers</li>
   <li>No location access</li>
-  <li>No contacts, calendar, microphone, or camera access</li>
-  <li>No selling or sharing of data, because no data is collected</li>
+  <li>No contacts, calendar or microphone access, and no camera permission: a
+  receipt is photographed by Android's own camera app (see Receipt photos)</li>
+  <li>No selling of data, and nothing you enter is shared with anyone, apart
+  from a receipt's currency and date in a request for its exchange rate, if you
+  turn that on (see Exchange rates)</li>
 </ul>
 
 <h2>Third-party components</h2>
-<p>KiraWise is built with open-source software libraries that run entirely on
-your device: a local database engine, a chart drawing library, date and number
-formatting, a QR code reader, the plugins that open the phone&rsquo;s own
-photo and file pickers and hand a file to Android&rsquo;s share sheet, and small
-plugins for the home-screen shortcuts, the app&rsquo;s version number and its own
-folders. None of them contact a server (without the internet permission,
-none of them could), and none of them collect information about you.</p>
+<p>KiraWise is built with software libraries: a local database engine, a
+chart drawing library, date and number formatting, a QR code reader, the
+plugin that opens the phone&rsquo;s own picker, Google's ML Kit text
+recognition for reading receipts and screenshots, and, for Plus, Google
+Play's billing
+library and RevenueCat's library (above).</p>
+<p>Most of them are open source. These are not: ML Kit; Google Play's billing
+library, which takes the payment for Plus; Google's Block Store (see KiraWise
+Plus); the parts of Google Play services these and RevenueCat's library rely
+on; and Amazon's Appstore
+billing library, which RevenueCat's library brings with it and which KiraWise
+never uses: Plus is sold through Google Play alone, and the part of Amazon's
+library that other apps could reach is taken out of the app.</p>
+<p>ML Kit recognises the text of a receipt photo or a screenshot on the phone;
+the image and its text are not sent to Google.</p>
+<p>ML Kit also contains a part that sends diagnostic and usage information to
+Google when the phone can reach the internet and the part is able to send
+(see below).
+There is no setting in ML Kit to turn this off. By
+<a href="https://developers.google.com/ml-kit/android-data-disclosure">Google's
+own account</a> it is: the phone's make and model, its operating-system
+version and build, and the hardware it has for running machine-learning
+models; the app's name and version; an identifier for this installation that is not
+meant to identify you or the phone; how long recognition took; the image's
+format and size; the size of what went in and what came out; the version of
+the recognizer; events such as starting and finishing a recognition; and error
+codes. It does not include the photo, or the text read from it. Google says it
+sends this encrypted and does not pass it on to third parties.</p>
+<p>Google Play's billing library, which brings up Google Play's purchase
+sheet for Plus, contains a part of the same kind, which sends Google
+information about how the billing library itself is working. Google does not
+publish what it contains. KiraWise gives it nothing you entered.</p>
+<p>The two parts are one sender, and with each report it sends it also gives
+the phone's make and model, its hardware, device and product names, its
+operating-system version, build and build fingerprint, the sender's own
+version, the time-zone offset, the kind of network it is on, the
+mobile operator code of its SIM (which country and network), the
+country and language set on it, and the app's build number.</p>
+<p>That sender looks at the phone's network connection before it sends, and
+KiraWise does not have the permission that allows it, so it may in fact send
+nothing. This policy describes it as if it does.</p>
+<p>The rest &mdash; every library but ML Kit, Google Play's billing library
+and RevenueCat's, with the Block Store it uses &mdash; run entirely on your
+phone and collect nothing about you through KiraWise.</p>
+<p>With online exchange rates on, KiraWise also asks Bank Negara Malaysia for
+its published rates, through the app's own network code and no library of the
+bank's (see Exchange rates).</p>
 
 <h2>Children</h2>
-<p>KiraWise is a general-audience budgeting tool. It is not directed at children
-under 13, and it does not knowingly collect information from anyone.</p>
+<p>KiraWise is a budgeting tool for adults. It is not directed at anyone under
+18, and it does not knowingly collect information from children.</p>
 
 <h2>Deleting your data</h2>
 <p>Because KiraWise keeps your data only on your device, you control it
@@ -156,38 +566,67 @@ completely:</p>
   data</strong> (Clear storage on some phones), or simply by uninstalling
   KiraWise.</li>
 </ul>
-<p>When you delete a record, KiraWise deletes it from its database. Some of
-what it said can still be elsewhere: in any backup you exported before, and the share sheet&rsquo;s copy of the last file shared
-(see Backups you make yourself); in a bill split&rsquo;s summary you copied,
-on the clipboard, in a clipboard history the phone or a keyboard app keeps
-(or on another device it synced to), or wherever you pasted it; and, for a
-bill split you delete, its people&rsquo;s names, if they are among the names
-kept for your next split.</p>
 <p>Test builds before version 1.0.0 (47) did not delete these cache copies:
 the picker&rsquo;s copies of a chosen picture, the file made for the share
 sheet, and the copy of a file picked to restore. 1.0.0 (47) deletes the
 picker&rsquo;s copies and the files made for the share sheet the first time
-it starts. The copy of a file picked to restore stays in the app&rsquo;s private
-cache until Android clears it, or until you clear it yourself under
+it starts. A copy picked to restore in one of those builds stays in the
+app&rsquo;s private cache until Android clears it, or until you clear it yourself under
 <strong>Settings &rarr; Apps &rarr; KiraWise &rarr; Storage &rarr; Clear
 cache</strong>, which leaves your data as it is.</p>
-<p>Those test builds could also export a spreadsheet of your transactions. One
-you exported is a copy of your records as they were: deleting a record does not
-change it.</p>
-<p>Uninstalling removes the database, any account photos and any QR code
-pictures with it, and the app&rsquo;s cache with whatever copy is left there. There
-is no server-side copy for us to delete, because there is no server.</p>
+<p>When you delete a record, what it said is removed from KiraWise. Some of it
+can still be elsewhere, for instance: in the latest AI change list's copy, if
+that list deleted the record (so that the list can be undone; it goes as "What
+KiraWise stores" says); in any file you exported or text you copied before,
+and the share sheet's copy of the last file shared (see Backups and exports
+you make yourself); and, for a bill split, or the share of one, that you
+delete, the names of its people, among the names kept for your next split, and
+what Add Item still held of it unsaved, if the app was closed on that page
+(until it is saved or discarded). KiraWise keeps a note that a record was
+deleted and when, under a random internal id, and nothing of its contents: it
+is what would let two devices agree, in a future version, that the record is
+gone. Clearing the app's data or uninstalling removes those notes too.</p>
+<p>Uninstalling removes the database, any account photos, any QR code
+pictures and the kept receipt photos with it, and the app's cache with
+whatever copy is left there. There
+is no copy of what you entered anywhere else for us to delete.</p>
+<p>Apart from what you share or paste somewhere yourself (see Backups and
+exports you make yourself), all that is off the phone is what KiraWise's
+components put there: RevenueCat's record of this phone's Plus and its own
+diagnostics (see KiraWise Plus), filed under the random identifier and not
+under your name; for a phone that has had Plus, the copy of that identifier in
+Google's Block Store; for a Google account that bought it, Google Play's
+record of the purchase; the diagnostics of Google's ML Kit and Google Play's
+billing library; and, if you turned on online exchange rates, whatever Bank
+Negara Malaysia keeps of the requests it received (a currency, a date and the
+internet address each came from).</p>
+<p>To have RevenueCat's record deleted, email us at the address below with
+your Member ID, which Settings shows and copies with a tap (every phone has
+one, with Plus or without), or, if you bought Plus, with the order number
+from Google Play's receipt (it begins GPA.). We will have it deleted and
+tell you when it is done. Copy the Member ID before you uninstall KiraWise
+or clear its data: after that the app makes a new one, and the old one
+cannot be found on the phone again. Until you ask, RevenueCat keeps the
+record, including after Plus ends; we do not delete it on a schedule. If
+KiraWise is still on the phone when it is deleted, the app files a new record
+under the same identifier the next time it opens.</p>
+<p>That does not reach the copy of the identifier in Google's Block Store,
+which Google keeps; Google Play's own record of a purchase, which is
+Google's; the diagnostics of ML Kit and Google Play's billing library,
+which Google holds; nor what Bank Negara Malaysia keeps of rate requests. We
+have no way to have those deleted. Cancelling a
+subscription, if one is offered, is done in Google Play, and deletes none of these.</p>
 
 <h2>Changes to this policy</h2>
-<p>If a future version of KiraWise adds a feature that sends data off your
-device &mdash; for example optional cloud backup &mdash; this policy will be updated before
-that version is released, and the app will ask for your consent before any data
-leaves your phone.</p>
+<p>If a future version of KiraWise adds a feature that sends anything you enter
+off your device — for example optional cloud backup — this policy will be
+updated before that version is released, and the app will ask for your consent
+before any of it leaves your phone.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: kirawise.app@gmail.com</p>
 
-<footer>KiraWise &middot; Last updated 1 November 2026</footer>
+<footer>KiraWise &middot; Effective 25 November 2026</footer>
 
 </body>
 </html>
