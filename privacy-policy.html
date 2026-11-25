@@ -34,7 +34,7 @@
 <body>
 
 <h1>KiraWise Privacy Policy</h1>
-<p class="date">Effective date: 25 November 2026</p>
+<p class="date">Effective date: 26 November 2026</p>
 <p>This policy covers every version of KiraWise, test builds on Google Play
 included. Version 1 has no internet permission and sends nothing; version
 2.0 and later go online only for what this policy describes.</p>
@@ -43,8 +43,7 @@ included. Version 1 has no internet permission and sends nothing; version
   <p><strong>KiraWise does not collect what you enter. Your records, budgets,
   goals, bill splits, receipt photos, the transfer screenshots you import, the
   payment notifications you choose to have read and the reminders you set stay
-  on your phone and are not sent anywhere; the one exception, off unless you turn it on, is a
-  receipt's currency and date in a request for an exchange rate.</strong></p>
+  on your phone and are not sent anywhere; the one exception, off unless you turn it on, is the currency and date of a receipt or an expense in a request for an exchange rate.</strong></p>
   <p>From version 2.0 the app has the Android internet permission, and uses it
   for three things only, each described below: finding out whether this phone
   has KiraWise Plus, and buying it, through Google Play and a service called
@@ -53,8 +52,7 @@ included. Version 1 has no internet permission and sends nothing; version
   and screenshots,
   and Google Play's billing library may send to Google; and, only if you turn
   it on, asking Bank Negara Malaysia for an exchange rate. None of it carries
-  anything you entered, apart from that exchange-rate request: the currency
-  and date of the receipt it is for.</p>
+  anything you entered, apart from that exchange-rate request: the currency and date of the receipt or expense it is for.</p>
   <p>Should a later version add an optional account for backing up your data,
   this policy will be updated and published before that version is
   released.</p>
@@ -79,12 +77,11 @@ storage on your device, most of it in one database file:</p>
   paid the bill (you or one of them), how much each of the others owes,
   whether they have paid it back, and which of your accounts the money went
   into; and the names you used last, ready for the next split</li>
-  <li>for a bill split in another currency: the currency, its amounts in that
+  <li>for a bill split or an expense in another currency: the currency, its amounts in that
   currency, the exchange rate it was converted at and where that rate came
   from (the app's approximate rate, one you typed, or Bank Negara Malaysia's,
   with the day it was published for)</li>
-  <li>trips: each trip's name, its dates and its currency, the friends on it,
-  and which bill splits are part of it</li>
+  <li>trips: each trip's name, its dates and its currency, a budget if you set one, the friends on it, and which bill splits and expenses are part of it</li>
   <li>the receipt photo a split was scanned from: a smaller copy, kept with
   the split until you delete it or the period you chose for it ends (see
   Receipt photos)</li>
@@ -305,17 +302,13 @@ showing on the phone.</p>
 to the Android screen where the access is withdrawn.</p>
 
 <h2>Exchange rates (optional, off by default)</h2>
-<p>A bill split can be in another currency, for a trip abroad. KiraWise works
-it out in that currency, converts it to ringgit at an exchange rate it saves
-with the split, and shows both. With nothing turned on, the rate is the last
+<p>A bill split or an expense can be in another currency, for a trip abroad. KiraWise works
+it out in that currency, converts it to ringgit at an exchange rate it saves with it, and shows both. With nothing turned on, the rate is the last
 one you typed for that currency, or an approximate rate built into the app,
-and you can type the receipt's own rate instead; nothing is sent
+and you can type your own rate instead; nothing is sent
 anywhere.</p>
 <p>If you turn on online exchange rates in Settings, KiraWise asks Bank Negara
-Malaysia, Malaysia's central bank, for the rate it published, whenever a split
-you are entering in Add Item is in a currency the bank publishes: when the
-currency is set, by you or from the split's trip, and when the split's date
-changes. The request goes over HTTPS to Bank Negara Malaysia's open data
+Malaysia, Malaysia's central bank, for the rate it published, whenever a split or an expense you are entering is in a currency the bank publishes: when the currency is set, by you, from its trip or from an unsaved draft you come back to, and when its date changes. The request goes over HTTPS to Bank Negara Malaysia's open data
 service at api.bnm.gov.my and names only the currency's code and the date;
 when the bank has no rate for that day, such as a weekend or a holiday,
 KiraWise asks again for each day before it, up to seven. Like any request, it
@@ -323,15 +316,13 @@ comes from your phone's internet address, and it carries a header naming the
 software that made it (Dart, and its version). It carries nothing else: no
 amounts, names or items, and no identifier for you or the phone. A rate
 fetched is held in memory until the app is closed, so the same question is not
-asked twice; apart from the rate saved with a split, or with the unsaved draft
-of one, it is not written down.</p>
+asked twice; apart from the rate saved with a split or an expense, or with the unsaved draft of a split, it is not written down.</p>
 <p>How Bank Negara Malaysia treats the requests it receives is for its own
 terms and policies (https://www.bnm.gov.my). The rates are Bank Negara
 Malaysia's: wherever KiraWise shows one it says so, and links to the bank's
 terms of use for its data (https://www.bnm.gov.my/terms-of-use-bnm-datasets).
 KiraWise is not affiliated with or endorsed by Bank Negara Malaysia.</p>
-<p>You can turn it off at any time in Settings. The rates already saved with
-your splits stay as they are.</p>
+<p>You can turn it off at any time in Settings. The rates already saved with your splits and expenses stay as they are.</p>
 
 <h2>Reminders (optional, off until you set one)</h2>
 <p>You can ask KiraWise to remind you before a fixed bill falls due, and add
@@ -498,8 +489,7 @@ RevenueCat offers turned off.</p>
   <li>No location access</li>
   <li>No contacts, calendar or microphone access, and no camera permission: a
   receipt is photographed by Android's own camera app (see Receipt photos)</li>
-  <li>No selling of data, and nothing you enter is shared with anyone, apart
-  from a receipt's currency and date in a request for its exchange rate, if you
+  <li>No selling of data, and nothing you enter is shared with anyone, apart from the currency and date of a receipt or an expense in a request for its exchange rate, if you
   turn that on (see Exchange rates)</li>
 </ul>
 
@@ -626,7 +616,7 @@ before any of it leaves your phone.</p>
 <h2>Contact</h2>
 <p>Questions about this policy: kirawise.app@gmail.com</p>
 
-<footer>KiraWise &middot; Effective 25 November 2026</footer>
+<footer>KiraWise &middot; Effective 26 November 2026</footer>
 
 </body>
 </html>
