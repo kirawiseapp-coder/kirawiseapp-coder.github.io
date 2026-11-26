@@ -34,7 +34,7 @@
 <body>
 
 <h1>KiraWise Privacy Policy</h1>
-<p class="date">Effective date: 26 November 2026</p>
+<p class="date">Effective date: 27 November 2026</p>
 <p>This policy covers every version of KiraWise, test builds on Google Play
 included. Version 1 has no internet permission and sends nothing; version
 2.0 and later go online only for what this policy describes.</p>
@@ -44,6 +44,10 @@ included. Version 1 has no internet permission and sends nothing; version
   goals, bill splits, receipt photos, the transfer screenshots you import, the
   payment notifications you choose to have read and the reminders you set stay
   on your phone and are not sent anywhere; the one exception, off unless you turn it on, is the currency and date of a receipt or an expense in a request for an exchange rate.</strong></p>
+  <p>If you move to a new phone and have Android copy your apps' data across
+  from the old one, your KiraWise data can go with it, from the one phone to
+  the other (see Moving to a new phone). It is never part of a cloud
+  backup.</p>
   <p>From version 2.0 the app has the Android internet permission, and uses it
   for three things only, each described below: finding out whether this phone
   has KiraWise Plus, and buying it, through Google Play and a service called
@@ -85,6 +89,9 @@ storage on your device, most of it in one database file:</p>
   <li>the receipt photo a split was scanned from: a smaller copy, kept with
   the split until you delete it or the period you chose for it ends (see
   Receipt photos)</li>
+  <li>a photo you attach to an expense or income: a smaller copy, kept with the
+  record until you remove it, delete the record or the period you chose for
+  receipt photos ends (see Receipt photos)</li>
   <li>for each transfer or payment screenshot you import: a fingerprint of
   its transaction reference, so that the same screenshot is not imported
   twice. It is a SHA-256 hash, kept in the reference's place and used only
@@ -202,6 +209,18 @@ time KiraWise starts after it has been kept that long, or at once if it already
 has when you choose. By default there is no period. The split, its items and
 its amounts stay when the photo goes. A backup you make includes these copies
 (see Backups and exports you make yourself).</p>
+<p>From version 2.0 you can also attach one photo to an ordinary expense or
+income, such as a receipt you want to keep. It is taken or picked in the same
+way, and it is not read at all: no text is recognised from it, and it does not
+count as a scan. KiraWise keeps the same kind of smaller copy, in the same
+private storage, and deletes the image the camera or the picker handed over as
+soon as that copy is made. Until the record is saved the copy is kept with the
+unsaved draft, and deleted if you discard the draft. It is deleted when you
+remove it from the record or put another in its place, and when you delete the
+record (if you undo that deletion, it comes back with the record); and it is
+counted and deleted with your receipt photos in <strong>Settings &rarr; Receipt
+photos</strong>, under the same period if you chose one. The record itself
+stays when the photo goes. A backup you make includes it.</p>
 
 <h2>Transfer and payment screenshots</h2>
 <p>To record a transfer or a payment you made, or to mark that a friend has
@@ -394,6 +413,28 @@ the clipboard only when you tap Paste, shows every change, and makes none
 until you confirm. If the reply has mistakes, KiraWise can copy a list of
 them for you to give back to the AI.</p>
 
+<h2>Moving to a new phone</h2>
+<p>From version 2.0, when you set up a new phone and choose to copy your apps
+and their data from your old one, KiraWise's data can be copied with them. What
+is copied is the database and the pictures kept beside it: kept receipt photos,
+account pictures and payment QR codes. It is copied only if you start that
+transfer; it goes from your old phone to your new one; KiraWise does not send
+it anywhere itself, and it does not come to us.</p>
+<p>The transfer is carried out by Android's phone-to-phone transfer or by the
+transfer tool your phone's maker provides, not by KiraWise, and how the data
+travels between the two phones is up to that tool. Phones on Android 11 or
+lower do not copy KiraWise's data this way.</p>
+<p>KiraWise stays out of Android's cloud backup altogether: nothing of it is
+uploaded to your Google account's backup, on any version of Android.</p>
+<p>Some things are not copied and start afresh on the new phone: payment
+notifications still waiting for you to confirm them, which apps' notifications
+you chose to have read, the list of reminders handed to Android (KiraWise makes
+it again from your reminders), and the random identifier Plus is filed under
+(see KiraWise Plus for what that means on a new phone).</p>
+<p>Your old phone keeps its copy until you delete it there (see Deleting your
+data). A backup file you make yourself (above) is the other way to move, and
+works between any two phones.</p>
+
 <h2>KiraWise Plus (optional purchase)</h2>
 <p>KiraWise Plus is an optional upgrade, bought through Google Play. It is
 sold as a one-time purchase: you pay once and keep it, and nothing renews. It
@@ -579,7 +620,9 @@ gone. Clearing the app's data or uninstalling removes those notes too.</p>
 <p>Uninstalling removes the database, any account photos, any QR code
 pictures and the kept receipt photos with it, and the app's cache with
 whatever copy is left there. There
-is no copy of what you entered anywhere else for us to delete.</p>
+is no copy of what you entered anywhere else for us to delete.
+If you copied your data to a new phone, that phone has a copy of its own,
+removed there in the same way.</p>
 <p>Apart from what you share or paste somewhere yourself (see Backups and
 exports you make yourself), all that is off the phone is what KiraWise's
 components put there: RevenueCat's record of this phone's Plus and its own
@@ -616,7 +659,7 @@ before any of it leaves your phone.</p>
 <h2>Contact</h2>
 <p>Questions about this policy: kirawise.app@gmail.com</p>
 
-<footer>KiraWise &middot; Effective 26 November 2026</footer>
+<footer>KiraWise &middot; Effective 27 November 2026</footer>
 
 </body>
 </html>
